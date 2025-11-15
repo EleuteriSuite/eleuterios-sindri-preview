@@ -1,0 +1,13 @@
+{
+  "name": "eleuterios-sindri-preview",
+  "version": "0.1.0",
+  "description": "A previewer to notepad docs",
+  "author": "eleuterios.org",
+  "homepage": "https://eleuterios.org",
+  "scripts": {
+    "serve": "npx http-server ."
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
