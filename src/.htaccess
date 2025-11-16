@@ -1,0 +1,16 @@
+# Activa el motor de reescritura
+RewriteEngine On
+
+# Asegura que se trabaje desde la raíz del proyecto
+RewriteBase /
+
+# No aplicar reglas si el archivo o directorio existe
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Excluir extensiones de archivos estáticos (añade o quita según necesites)
+RewriteCond %{REQUEST_URI} !\.(?:png|jpg|jpeg|gif|bmp|webp|svg|ico|mp4|webm|ogg|mp3|wav|css|js|json|pdf|woff2?|ttf|eot|txt)$ [NC]
+
+# Redirigir todo lo demás a index.html
+RewriteRule ^ index.html [L]
