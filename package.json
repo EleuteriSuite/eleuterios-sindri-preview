@@ -8,9 +8,21 @@
   "types": "dist/index.d.ts",
   "type": "commonjs",
   "scripts": {
-    "serve": "npx http-server ./src"
+    "build:sindri-css": "tailwindcss -i ./src/assets/sindri.css -o ./dist_sindri/assets/sindri.min.css --minify",
+    "build:sindri-copy:linux": "mkdir -p dist_sindri && cp -r ./src/index.html ./dist_sindri/ && cp -r ./src/assets ./dist_sindri/",
+    "build:sindri-copy:win": "powershell -Command \"New-Item -ItemType Directory -Force -Path dist_sindri; Copy-Item -Recurse -Force src/* dist_sindri/\"",
+    "build:sindri:linux": "npm run build:sindri-css && npm run build:sindri-copy:linux",
+    "build:sindri:win": "npm run build:sindri-css && npm run build:sindri-copy:win",
+    "serve": "npx http-server ./dist_sindri"
   },
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "@tailwindcss/cli": "^4.1.17",
+    "autoprefixer": "^10.4.22",
+    "http-server": "^14.1.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17"
+  },
+  "dependencies": {
+    "flyonui": "^2.4.1"
   }
 }
