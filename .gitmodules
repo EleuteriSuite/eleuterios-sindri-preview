@@ -1,0 +1,3 @@
+[submodule "third_party/docsify"]
+	path = third_party/docsify
+	url = https://github.com/vg2357io/docsify.git

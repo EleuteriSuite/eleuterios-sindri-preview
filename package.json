@@ -8,7 +8,7 @@
   "types": "dist/index.d.ts",
   "type": "commonjs",
   "scripts": {
-    "build:sindri-css": "tailwindcss -i ./src/assets/sindri.css -o ./dist_sindri/assets/sindri.min.css --minify",
+    "build:sindri-css": "tailwindcss -i ./src/assets/to_compile/sindri.css -o ./dist_sindri/assets/sindri.min.css --minify",
     "build:sindri-copy:linux": "mkdir -p dist_sindri && cp -r ./src/index.html ./dist_sindri/ && cp -r ./src/assets ./dist_sindri/",
     "build:sindri-copy:win": "powershell -Command \"New-Item -ItemType Directory -Force -Path dist_sindri; Copy-Item -Recurse -Force src/* dist_sindri/\"",
     "build:sindri:linux": "npm run build:sindri-css && npm run build:sindri-copy:linux",
