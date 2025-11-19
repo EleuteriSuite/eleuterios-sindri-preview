@@ -14,3 +14,15 @@ htmltag:
     - color: "#ffffff"
     - font-size: "12px"
 ```
+
+```sindri:ui:card
+title: "Conoce nuestra tienda"
+content: "Descripción de la tienda"
+footer: "Acciones en la tienda"
+variant: "primary"
+size: "lg"
+as: "a"
+href: "https://tu-tienda.example"
+htmltag:
+  class: "w-1/3 border-2 border-gray-500"
+```
