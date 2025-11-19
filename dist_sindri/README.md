@@ -1,6 +1,19 @@
 # Sindri previewer v0.1.0
 
-Loading...
+Testing...
+
+```sindri:ui:button
+text: "Visita nuestra tienda"
+variant: "primary"
+size: "lg"
+as: "a"
+href: "https://tu-tienda.example"
+htmltag:
+  class: "relative mx-auto"
+  styles:
+    - color: "#ffffff"
+    - font-size: "12px"
+```
 
 <div class="bg-base-100 py-8 sm:py-16 lg:py-24">
 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
