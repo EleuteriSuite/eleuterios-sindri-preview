@@ -32,8 +32,137 @@
     return [base, chosenV, chosenS, extra].filter(Boolean).join(' ').trim();
   }
 
+    function renderButton(cfg) {
+        const C = window.SindriCore || {};
+        const stylesInline = C.stylesArrayToInline
+            ? C.stylesArrayToInline(cfg.htmltag && cfg.htmltag.styles)
+            : '';
+        const asTag = (cfg.as || 'button').toLowerCase();
+        const isLink = asTag === 'a';
+        const tag = isLink ? 'a' : 'button';
+        const attrs = {
+            class: classesForButton(cfg),
+            style: stylesInline || undefined,
+        };
+        if (isLink) {
+            attrs.href = cfg.href || '#';
+            attrs.role = 'button';
+        } else {
+            attrs.type = cfg.type || 'button';
+        }
+
+        const text = cfg.text != null ? String(cfg.text) : 'Button';
+        const attrStr = C.attrsToString ? C.attrsToString(attrs) : '';
+
+        // Wrap inside a container to avoid Markdown post-processing issues
+        return `<div class="sindri-ui sindri-ui-button"><${tag} ${attrStr}>${text}</${tag}></div>`;
+    }
+
+    function renderCard(cfg) {
+        const C = window.SindriCore || {};
+
+        const cardClassBase =
+            'bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm';
+        const headerClassBase =
+            "@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6";
+        const titleClass = 'leading-none font-semibold';
+        const descClass = 'text-muted-foreground text-sm';
+        const actionClassBase =
+            'col-start-2 row-span-2 row-start-1 self-start justify-self-end';
+        const contentClass = 'px-6';
+        const footerClassBase = 'flex items-center px-6 [.border-t]:pt-6';
+
+        const stylesInline = C.stylesArrayToInline
+            ? C.stylesArrayToInline(cfg && cfg.htmltag && cfg.htmltag.styles)
+            : '';
+        const cardAttrs = {
+            class: [cardClassBase, cfg && cfg.htmltag && cfg.htmltag.class]
+                .filter(Boolean)
+                .join(' '),
+            style: stylesInline || undefined,
+            'data-slot': 'card',
+        };
+
+        const hasHeader = cfg && (cfg.title || cfg.description || cfg.action);
+        const hasContent = cfg && cfg.content != null && cfg.content !== '';
+        const hasFooter = cfg && cfg.footer != null && cfg.footer !== '';
+
+        // Header HTML
+        let headerHtml = '';
+        if (hasHeader) {
+            const headerAttrs = {
+                class: [
+                    headerClassBase,
+                    cfg && cfg.header && cfg.header.class,
+                    cfg && cfg.headerBorder ? 'border-b' : '',
+                ]
+                    .filter(Boolean)
+                    .join(' '),
+                'data-slot': 'card-header',
+            };
+            const headerParts = [];
+            if (cfg && cfg.title) {
+                headerParts.push(
+                    `<h3 data-slot="card-title" class="${titleClass}">${cfg.title}</h3>`
+                );
+            }
+            if (cfg && cfg.description) {
+                headerParts.push(
+                    `<p data-slot="card-description" class="${descClass}">${cfg.description}</p>`
+                );
+            }
+
+            // Action button/link
+            if (cfg && cfg.action) {
+
+
+                let renderButton = null;
+                try {
+                    // environments sin módulos no soportarán import, por eso fallback
+                    renderButton = window.__SindriUtilsUi?.renderButton || null;
+                } catch (e) {
+                    throw new Error('Sindri UI: ui:button plugin requires Sindri Utils UI');
+                }
+                const headerAction = renderButton(cfg.action)?? ''
+
+                if (headerAction) {
+                    headerParts.push(
+                        headerAction
+                    );
+                }
+            }
+
+            const headerAttrStr = C.attrsToString ? C.attrsToString(headerAttrs) : '';
+            headerHtml = `<div ${headerAttrStr}>${headerParts.join('')}</div>`;
+        }
+
+        // Content HTML
+        let contentHtml = '';
+        if (hasContent) {
+            contentHtml = `<div data-slot="card-content" class="${contentClass}">${cfg.content}</div>`;
+        }
+
+        // Footer HTML
+        let footerHtml = '';
+        if (hasFooter) {
+            const footerAttrs = {
+                class: [footerClassBase, cfg && cfg.footerBorder ? 'border-t' : '']
+                    .filter(Boolean)
+                    .join(' '),
+                'data-slot': 'card-footer',
+            };
+            const footerAttrStr = C.attrsToString ? C.attrsToString(footerAttrs) : '';
+            footerHtml = `<div ${footerAttrStr}>${cfg.footer}</div>`;
+        }
+
+        const cardAttrStr = C.attrsToString ? C.attrsToString(cardAttrs) : '';
+        return `<div class="sindri-ui sindri-ui-card"><div ${cardAttrStr}>${headerHtml}${contentHtml}${footerHtml}</div></div>`;
+    }
+
   // Exponer en el global para consumo por otros plugins
   window.__SindriUtilsUi = Object.assign({}, window.__SindriUtilsUi || {}, {
     classesForButton,
+    renderButton,
+    renderCard,
   });
 })();

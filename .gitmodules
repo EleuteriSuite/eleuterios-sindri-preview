@@ -1,6 +1,0 @@
-[submodule "third_party/docsify"]
-	path = third_party/docsify
-	url = https://github.com/vg2357io/docsify.git
-[submodule "third_party/shadcn-vue"]
-	path = third_party/shadcn-vue
-	url = https://github.com/vg2357io/shadcn-vue.git
