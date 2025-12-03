@@ -87,7 +87,7 @@
             };
             const subtitleAttrStr = C.attrsToString ? C.attrsToString(subtitleAttrs) : '';
             heroParts.push(
-                `<h1 ${subtitleAttrStr}>${cfg.subtitle.description}</h1>`
+                `<p ${subtitleAttrStr}>${cfg.subtitle.description}</p>`
             );
         }
 
@@ -99,7 +99,7 @@
             } catch (e) {
                 throw new Error('Sindri: marketing:hero plugin requires Sindri Utils UI');
             }
-            const heroAction = renderButton(cfg.action.description)?? ''
+            const heroAction = renderButton(cfg.action)?? ''
 
             if (heroAction) {
                 heroParts.push(

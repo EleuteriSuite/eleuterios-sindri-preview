@@ -3,7 +3,7 @@
 Testing...
 
 ```sindri:ui:button
-text: "Visita nuestra tienda"
+description: "Visita nuestra tienda"
 variant: "primary"
 size: "lg"
 as: "a"
@@ -25,4 +25,19 @@ as: "a"
 href: "https://tu-tienda.example"
 htmltag:
   class: "w-1/3 border-2 border-gray-500"
+```
+
+```sindri:marketing:hero
+title:
+  description: "Ecosistema digital Open Source"
+subtitle:
+  description: "Tu página web, tienda virtual, correos electrónicos, newsletter, etc por 15€/mes o 150€/año"
+action:
+  description: "Ser mecenas"
+  variant: "primary"
+  size: "lg"
+  as: "a"
+  href: "#mecenas"
+htmltag:
+  class: "testclass"
 ```
