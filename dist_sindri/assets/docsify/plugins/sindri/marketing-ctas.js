@@ -1,6 +1,20 @@
 // Sindri Docsify plugin: marketing:ctas
 // Depende de window.SindriCore (core.js) y opcionalmente de window.__SindriUtilsUi
 
+/*
+```sindri:marketing:ctas
+title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit"
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper."
+image:
+  src: "https://images.unsplash.com/photo-1464582883107-8adf2dca8a9f?auto=format&fit=crop&q=80&w=1160"
+  alt: "CTA image"
+actions:
+  - description: "Get Started Today"
+    href: "#"
+    variant: "secondary"
+```
+ */
+
 (function () {
   function renderCtas(cfg) {
     const C = window.SindriCore || {};

@@ -1,6 +1,29 @@
 // Sindri Docsify plugin: marketing:headers
 // Header con marca, navegación y acciones
 
+/*
+```sindri:marketing:headers
+brand:
+  text: "Acme"
+  href: "#"
+nav:
+  items:
+    - title: "About"
+      href: "#"
+    - title: "Careers"
+      href: "#"
+    - title: "Blog"
+      href: "#"
+actions:
+  - description: "Login"
+    href: "#"
+    variant: "default"
+  - description: "Register"
+    href: "#"
+    variant: "outline"
+```
+ */
+
 (function () {
   function renderHeaders(cfg) {
     const C = window.SindriCore || {};

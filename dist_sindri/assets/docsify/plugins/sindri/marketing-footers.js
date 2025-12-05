@@ -1,6 +1,32 @@
 // Sindri Docsify plugin: marketing:footers
 // Footer con newsletter y columnas de enlaces
 
+/*
+```sindri:marketing:footers
+newsletter:
+  title: "Get the latest news!"
+  description: "Join our newsletter to stay up to date."
+  placeholder: "john@rhcp.com"
+  button:
+    description: "Sign Up"
+    href: "#"
+    variant: "default"
+columns:
+  - title: "Services"
+    links:
+      - title: "1on1 Coaching"
+        href: "#"
+      - title: "Company Review"
+        href: "#"
+  - title: "Company"
+    links:
+      - title: "About"
+        href: "#"
+      - title: "Team"
+        href: "#"
+```
+ */
+
 (function () {
   function renderFooters(cfg) {
     const C = window.SindriCore || {};

@@ -1,6 +1,21 @@
 // Sindri Docsify plugin: marketing:banners
 // Depende de window.SindriCore (core.js) y opcionalmente de window.__SindriUtilsUi
 
+/*
+```sindri:marketing:banners
+title: "Understand user flow and"
+titleStrong: "increase"
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi. Natus, provident accusamus impedit minima harum corporis iusto."
+actions:
+  - description: "Get Started"
+    href: "#"
+    variant: "default"
+  - description: "Learn More"
+    href: "#"
+    variant: "outline"
+```
+ */
+
 (function () {
   function renderBanners(cfg) {
     const C = window.SindriCore || {};

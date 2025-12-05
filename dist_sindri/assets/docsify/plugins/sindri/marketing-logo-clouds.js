@@ -1,6 +1,20 @@
 // Sindri Docsify plugin: marketing:logo-clouds
 // Muestra una rejilla de logos con enlaces opcionales
 
+/*
+```sindri:marketing:logo-clouds
+items:
+  - src: "https://dummyimage.com/160x40/000/fff&text=Logo+A"
+    alt: "Logo A"
+  - src: "https://dummyimage.com/160x40/000/fff&text=Logo+B"
+    alt: "Logo B"
+  - src: "https://dummyimage.com/160x40/000/fff&text=Logo+C"
+    alt: "Logo C"
+  - src: "https://dummyimage.com/160x40/000/fff&text=Logo+D"
+    alt: "Logo D"
+```
+ */
+
 (function () {
   function renderLogoClouds(cfg) {
     const C = window.SindriCore || {};
