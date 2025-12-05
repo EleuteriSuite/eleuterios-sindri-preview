@@ -80,6 +80,88 @@ items:
     status: "pending"
 ```
 
+```sindri:ui:side-menu
+title: "Project"
+items:
+  - title: "Overview"
+    href: "#"
+    active: true
+  - title: "Settings"
+    href: "#"
+  - title: "Teams"
+    href: "#"
+content: "Main content placeholder"
+```
+
+```sindri:ui:vertical-menu
+title: "Settings"
+items:
+  - title: "Profile"
+    href: "#"
+  - title: "Billing"
+    href: "#"
+    active: true
+  - title: "Security"
+    href: "#"
+```
+
+```sindri:ui:skip-links
+items:
+  - title: "Skip to content"
+    href: "#main"
+  - title: "Skip to navigation"
+    href: "#nav"
+```
+
+```sindri:ui:stats
+items:
+  - value: "24k"
+    label: "Users"
+  - value: "98%"
+    label: "Uptime"
+  - value: "312"
+    label: "Deploys"
+```
+
+```sindri:ui:tables
+columns: ["Name", "Title", "Email"]
+rows:
+  - ["Alice", "Engineer", "alice@example.com"]
+  - ["Bob", "Manager", "bob@example.com"]
+```
+
+```sindri:ui:timelines
+items:
+  - time: "2025-01-01"
+    title: "Project created"
+    description: "Initial repository setup."
+  - time: "2025-02-15"
+    title: "First release"
+    description: "v0.1.0 shipped"
+```
+
+```sindri:ui:toasts
+items:
+  - variant: "success"
+    title: "Saved"
+    description: "Your changes have been saved."
+  - variant: "error"
+    title: "Failed"
+    description: "Could not connect to server."
+```
+
+```sindri:ui:media
+items:
+  - src: "https://picsum.photos/seed/1/400/240"
+    alt: "Random 1"
+    title: "Card title 1"
+    description: "Short description here."
+  - src: "https://picsum.photos/seed/2/400/240"
+    alt: "Random 2"
+    title: "Card title 2"
+    description: "Another line of text."
+```
+
 ```sindri:ui:accordions
 items:
   - title: "What are the basic features?"
