@@ -15,6 +15,100 @@ htmltag:
     - font-size: "12px"
 ```
 
+```sindri:ui:breadcrumbs
+items:
+  - title: "Home"
+    href: "#"
+  - title: "Category"
+    href: "#"
+  - title: "Product"
+    href: "#"
+```
+
+```sindri:ui:accordions
+items:
+  - title: "What are the basic features?"
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt similique..."
+    open: true
+  - title: "How do I get started?"
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit..."
+  - title: "What support options are available?"
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit..."
+```
+
+```sindri:ui:range-inputs
+items:
+  - title: "Max Volume"
+    id: "maxVolume"
+    min: 0
+    max: 100
+    value: 20
+htmltag:
+  styles:
+    - background: "linear-gradient(180deg, #fff, #f8fafc)"
+```
+
+```sindri:ui:textareas
+items:
+  - title: "Notes"
+    id: "Notes"
+    rows: 4
+    value: "Texto inicial"
+htmltag:
+  styles:
+    - background: "linear-gradient(180deg, #fff, #f8fafc)"
+```
+
+```sindri:ui:checkboxes
+legend: "Checkboxes"
+items:
+  - id: "Option1"
+    title: "Option 1"
+    checked: true
+  - id: "Option2"
+    title: "Option 2"
+  - id: "Option3"
+    title: "Option 3"
+```
+
+```sindri:ui:radio-groups
+legend: "Delivery"
+name: "DeliveryOption"
+items:
+  - id: "DeliveryStandard"
+    title: "Standard"
+    right: "Free"
+    value: "DeliveryStandard"
+    checked: true
+  - id: "DeliveryPriority"
+    title: "Next Day"
+    right: "£9.99"
+    value: "DeliveryPriority"
+```
+
+```sindri:ui:selects
+items:
+  - id: "Headline"
+    title: "Headliner"
+    placeholder: "Please select"
+    value: "JH"
+    options:
+      - { value: "JM", title: "John Mayer" }
+      - { value: "SRV", title: "Stevie Ray Vaughn" }
+      - { value: "JH", title: "Jimi Hendrix" }
+      - { value: "BBK", title: "B.B King" }
+      - { value: "AK", title: "Albert King" }
+      - { value: "BG", title: "Buddy Guy" }
+      - { value: "EC", title: "Eric Clapton" }
+```
+
+```sindri:ui:toggles
+items:
+  - id: "AcceptConditions"
+  - id: "Newsletter"
+    checked: true
+```
+
 ```sindri:ui:card
 title: "Conoce nuestra tienda"
 content: "Descripción de la tienda"
