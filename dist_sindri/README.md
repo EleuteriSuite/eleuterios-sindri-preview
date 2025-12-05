@@ -226,6 +226,116 @@ columns:
         href: "#"
 ```
 
+```sindri:marketing:announcements
+items:
+  - title: "We launched v2.0"
+    description: "Faster bundle and more blocks."
+    variant: "success"
+    action:
+      description: "Read more"
+      variant: "link"
+```
+
+```sindri:marketing:sections
+title: "Build fast"
+description: "Ship beautiful docs with reusable blocks."
+image:
+  src: "https://picsum.photos/seed/section/640/400"
+  alt: "Section image"
+actions:
+  - description: "Get started"
+    variant: "default"
+  - description: "Learn more"
+    variant: "outline"
+```
+
+```sindri:marketing:empty-content
+icon: "📭"
+title: "No items found"
+description: "Try changing your filters or create a new item."
+actions:
+  - description: "Create item"
+    variant: "default"
+```
+
+```sindri:marketing:faqs
+title: "FAQs"
+description: "Common questions answered"
+items:
+  - question: "What is Sindri?"
+    answer: "A set of markdown-driven UI blocks for Docsify."
+  - question: "How do I install?"
+    answer: "Include the bundle and write sindri blocks in your README."
+```
+
+```sindri:marketing:polls
+question: "What's your favorite stack?"
+name: "stack"
+options:
+  - id: "stack-react"
+    label: "React"
+    value: "react"
+  - id: "stack-vue"
+    label: "Vue"
+    value: "vue"
+  - id: "stack-svelte"
+    label: "Svelte"
+    value: "svelte"
+action:
+  description: "Vote"
+  variant: "default"
+```
+
+```sindri:marketing:stats
+title: "Our impact"
+description: "Key numbers that matter"
+items:
+  - value: "12k+"
+    label: "Users"
+  - value: "98%"
+    label: "Satisfaction"
+  - value: "24/7"
+    label: "Support"
+```
+
+```sindri:marketing:pricing
+title: "Simple pricing"
+description: "Choose the plan that fits your needs"
+plans:
+  - name: "Starter"
+    price: "$9/mo"
+    description: "For individuals"
+    features:
+      - "1 project"
+      - "Basic support"
+    action:
+      description: "Choose Starter"
+      variant: "default"
+  - name: "Pro"
+    price: "$29/mo"
+    description: "For small teams"
+    popular: true
+    features:
+      - "Unlimited projects"
+      - "Priority support"
+    action:
+      description: "Choose Pro"
+      variant: "primary"
+```
+
+```sindri:marketing:feature-grids
+title: "Everything you need"
+description: "A compact set of building blocks"
+items:
+  - icon: "⚡"
+    title: "Fast"
+    description: "Optimized bundle and instant rendering"
+  - icon:
+      svg: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' class='size-5'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'/></svg>"
+    title: "Reliable"
+    description: "Simple, predictable output"
+```
+
 ```sindri:ui:breadcrumbs
 items:
   - title: "Home"
