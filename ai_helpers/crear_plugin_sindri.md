@@ -17,7 +17,7 @@ htmltag:
     - background: "linear-gradient(180deg, #fff, #f8fafc)"
 ```
 
-Sigue estos pasos para todos los ficheros que encuentres en `ai_helpers/components/ui`, cada uno es un plugin diferente:
+Sigue estos pasos para todos los ficheros que encuentres en `ai_helpers/components/marketing`, cada uno es un plugin diferente:
 
 1) Observa cómo es la estructura HTML final del plugin que estás creando: `ai_helpers/components/<category>/<block>/1.html` Solo debes fijarte en el html que hay dentro del body.
 

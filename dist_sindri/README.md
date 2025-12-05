@@ -1,18 +1,83 @@
-# Sindri previewer v0.1.0
+```sindri:marketing:banners
+title: "Understand user flow and"
+titleStrong: "increase"
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi. Natus, provident accusamus impedit minima harum corporis iusto."
+actions:
+  - description: "Get Started"
+    href: "#"
+    variant: "default"
+  - description: "Learn More"
+    href: "#"
+    variant: "outline"
+```
 
-Testing...
+```sindri:marketing:ctas
+title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit"
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper."
+image:
+  src: "https://images.unsplash.com/photo-1464582883107-8adf2dca8a9f?auto=format&fit=crop&q=80&w=1160"
+  alt: "CTA image"
+actions:
+  - description: "Get Started Today"
+    href: "#"
+    variant: "secondary"
+```
 
-```sindri:ui:button
-description: "Visita nuestra tienda"
-variant: "primary"
-size: "lg"
-as: "a"
-href: "https://tu-tienda.example"
-htmltag:
-  class: "relative mx-auto"
-  styles:
-    - color: "#ffffff"
-    - font-size: "12px"
+```sindri:marketing:logo-clouds
+items:
+  - src: "https://dummyimage.com/160x40/000/fff&text=Logo+A"
+    alt: "Logo A"
+  - src: "https://dummyimage.com/160x40/000/fff&text=Logo+B"
+    alt: "Logo B"
+  - src: "https://dummyimage.com/160x40/000/fff&text=Logo+C"
+    alt: "Logo C"
+  - src: "https://dummyimage.com/160x40/000/fff&text=Logo+D"
+    alt: "Logo D"
+```
+
+```sindri:marketing:headers
+brand:
+  text: "Acme"
+  href: "#"
+nav:
+  items:
+    - title: "About"
+      href: "#"
+    - title: "Careers"
+      href: "#"
+    - title: "Blog"
+      href: "#"
+actions:
+  - description: "Login"
+    href: "#"
+    variant: "default"
+  - description: "Register"
+    href: "#"
+    variant: "outline"
+```
+
+```sindri:marketing:footers
+newsletter:
+  title: "Get the latest news!"
+  description: "Join our newsletter to stay up to date."
+  placeholder: "john@rhcp.com"
+  button: 
+    description: "Sign Up"
+    href: "#"
+    variant: "default"
+columns:
+  - title: "Services"
+    links:
+      - title: "1on1 Coaching"
+        href: "#"
+      - title: "Company Review"
+        href: "#"
+  - title: "Company"
+    links:
+      - title: "About"
+        href: "#"
+      - title: "Team"
+        href: "#"
 ```
 
 ```sindri:ui:breadcrumbs
