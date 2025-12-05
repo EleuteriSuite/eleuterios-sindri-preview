@@ -1,4 +1,20 @@
 // Sindri Docsify plugin: ui:empty-states
+
+/*
+```sindri:ui:empty-states
+title: "No items found"
+description: "Get started by creating your first item. It only takes a few seconds."
+action:
+  title: "Create Item"
+  href: "#"
+links:
+  - title: "Learn how"
+    href: "#"
+  - title: "view examples"
+    href: "#"
+```
+ */
+
 (function () {
     function renderEmptyState(cfg) {
         const C = window.SindriCore || {};

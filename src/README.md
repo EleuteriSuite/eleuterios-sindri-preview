@@ -25,6 +25,61 @@ items:
     href: "#"
 ```
 
+```sindri:ui:tabs
+items:
+  - title: "Profile"
+    selected: true
+    content: "Contenido del perfil de ejemplo."
+  - title: "Account"
+    content: "Opciones de cuenta."
+  - title: "Notifications"
+    content: "Preferencias de notificación."
+```
+
+```sindri:ui:pagination
+total: 5
+current: 2
+hrefBase: "#"
+```
+
+```sindri:ui:progress-bars
+items:
+  - title: "Uploading files"
+    value: 35
+    max: 100
+    caption: "35% completed"
+  - title: "Generating report"
+    value: 72
+    max: 120
+    colorClass: "bg-emerald-600"
+    caption: "Step 3 of 5"
+```
+
+```sindri:ui:loaders
+items:
+  - type: "spinner"
+    size: 8
+    colorClass: "text-indigo-600"
+    title: "Loading data"
+  - type: "dots"
+    size: 4
+    colorClass: "text-gray-500"
+    title: "Waiting"
+```
+
+```sindri:ui:steps
+items:
+  - title: "Account"
+    description: "Create your account"
+    status: "complete"
+  - title: "Profile"
+    description: "Add personal info"
+    status: "current"
+  - title: "Confirm"
+    description: "Review and finish"
+    status: "pending"
+```
+
 ```sindri:ui:accordions
 items:
   - title: "What are the basic features?"

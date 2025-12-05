@@ -1,4 +1,14 @@
 // Sindri Docsify plugin: ui:button-groups
+
+/*
+```sindri:ui:button-groups
+items:
+  - title: "View"
+  - title: "Edit"
+  - title: "Delete"
+```
+ */
+
 (function () {
     function renderButtonGroups(cfg) {
         const C = window.SindriCore || {};

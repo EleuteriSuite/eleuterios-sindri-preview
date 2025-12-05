@@ -1,5 +1,23 @@
 // Sindri Docsify plugin: ui:quantity-inputs
 // Depende de window.SindriCore (core.js)
+
+/*
+```sindri:ui:quantity-inputs
+items:
+  - title: "Cantidad"
+    value: 2
+    min: 1
+    max: 10
+  - title: "Unidades"
+    value: 1
+    min: 0
+    max: 99
+htmltag:
+  styles:
+    - background: "linear-gradient(180deg, #ffffff, #f1f5f9)"
+```
+ */
+
 (function () {
   function renderQuantityInputs(cfg) {
     const C = window.SindriCore || {};

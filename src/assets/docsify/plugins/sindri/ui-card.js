@@ -2,6 +2,21 @@
 // Depende de window.SindriCore (core.js)
 // Depende de window.__SindriUtilsUi (utils-ui.js)
 
+/*
+```sindri:ui:card
+title: "Conoce nuestra tienda"
+content: "Descripción de la tienda"
+footer: "Acciones en la tienda"
+variant: "primary"
+size: "lg"
+as: "a"
+href: "https://tu-tienda.example"
+htmltag:
+  class: "w-1/3 border-2 border-gray-500"
+```
+ */
+
+
 (function () {
   function install(hook) {
     hook.beforeEach(function (md) {

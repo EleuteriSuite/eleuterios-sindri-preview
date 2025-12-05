@@ -1,5 +1,22 @@
 // Sindri Docsify plugin: ui:inputs
 // Depende de window.SindriCore (core.js)
+
+/*
+```sindri:ui:inputs
+items:
+  - title: "Email"
+    type: "email"
+    placeholder: "tu@correo.com"
+    description: "Nunca compartiremos tu correo."
+  - title: "Nombre"
+    type: "text"
+    placeholder: "Tu nombre"
+htmltag:
+  styles:
+    - background: "linear-gradient(180deg, #fff, #f8fafc)"
+```
+ */
+
 (function () {
   function renderInputs(cfg) {
     const C = window.SindriCore || {};

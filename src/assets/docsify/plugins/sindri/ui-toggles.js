@@ -1,5 +1,15 @@
 // Sindri Docsify plugin: ui:toggles
 // Depende de window.SindriCore (core.js)
+
+/*
+```sindri:ui:toggles
+items:
+  - id: "AcceptConditions"
+  - id: "Newsletter"
+    checked: true
+```
+ */
+
 (function () {
   function renderToggles(cfg) {
     const C = window.SindriCore || {};

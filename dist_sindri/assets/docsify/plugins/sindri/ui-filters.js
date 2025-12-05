@@ -1,4 +1,33 @@
 // Sindri Docsify plugin: ui:filters
+
+/*
+```sindri:ui:filters
+items:
+  - title: "Color"
+    type: "checkbox"
+    options:
+      - title: "Red"
+        checked: false
+      - title: "Blue"
+        checked: true
+      - title: "Green"
+        checked: true
+  - title: "Size"
+    type: "radio"
+    options:
+      - title: "M"
+        checked: false
+      - title: "L"
+        checked: true
+      - title: "XL"
+        checked: false
+  - title: "Price"
+    type: "range"
+    min: 5
+    max: 2000
+```
+ */
+
 (function () {
     function renderFilters(cfg) {
         const C = window.SindriCore || {};

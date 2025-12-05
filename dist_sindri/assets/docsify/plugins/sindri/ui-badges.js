@@ -1,4 +1,15 @@
 // Sindri Docsify plugin: ui:badges
+
+/*
+```sindri:ui:badges
+items:
+  - title: "Live"
+  - title: "Live"
+    htmltag:
+      class: "border border-purple-500 text-purple-700 bg-transparent"
+```
+ */
+
 (function () {
   function renderBadges(cfg) {
     const C = window.SindriCore || {};

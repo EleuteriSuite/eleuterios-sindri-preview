@@ -1,5 +1,24 @@
 // Sindri Docsify plugin: ui:selects
 // Depende de window.SindriCore (core.js)
+
+/*
+```sindri:ui:selects
+items:
+  - id: "Headline"
+    title: "Headliner"
+    placeholder: "Please select"
+    value: "JH"
+    options:
+      - { value: "JM", title: "John Mayer" }
+      - { value: "SRV", title: "Stevie Ray Vaughn" }
+      - { value: "JH", title: "Jimi Hendrix" }
+      - { value: "BBK", title: "B.B King" }
+      - { value: "AK", title: "Albert King" }
+      - { value: "BG", title: "Buddy Guy" }
+      - { value: "EC", title: "Eric Clapton" }
+```
+ */
+
 (function () {
   function renderSelects(cfg) {
     const C = window.SindriCore || {};

@@ -2,6 +2,23 @@
 // Depende de window.SindriCore (core.js)
 // Depende de window.__SindriUtilsUi (utils-ui.js)
 
+/*
+```sindri:marketing:hero
+title:
+  description: "Ecosistema digital Open Source"
+subtitle:
+  description: "Tu página web, tienda virtual, correos electrónicos, newsletter, etc por 15€/mes o 150€/año"
+action:
+  description: "Ser mecenas"
+  variant: "primary"
+  size: "lg"
+  as: "a"
+  href: "#mecenas"
+htmltag:
+  class: "testclass"
+```
+ */
+
 (function () {
     function renderHero(cfg) {
         const C = window.SindriCore || {};

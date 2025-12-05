@@ -1,5 +1,21 @@
 // Sindri Docsify plugin: marketing:feature
 // Depende de window.SindriCore (core.js) y opcionalmente de window.__SindriUtilsUi
+
+/*
+```sindri:marketing:feature
+items:
+  - title: "Sin comisión"
+    description: "Sin tarifas ocultas ni sorpresas."
+  - title: "Rápido de implementar"
+    description: "Plantillas listas y componentes reutilizables."
+  - title: "Escalable"
+    description: "Añade más bloques y páginas según creces."
+htmltag:
+  styles:
+    - background: "linear-gradient(180deg, #fff, #f8fafc)"
+```
+ */
+
 (function () {
     function renderFeature(cfg) {
         const C = window.SindriCore || {};

@@ -1,4 +1,35 @@
 // Utilidades compartidas para plugins Sindri UI (IIFE, sin módulos) y expuestas en window
+
+/*
+```sindri:ui:button
+description: "Visita nuestra tienda"
+variant: "primary"
+size: "lg"
+as: "a"
+href: "https://tu-tienda.example"
+htmltag:
+  class: "relative mx-auto"
+  styles:
+    - color: "#ffffff"
+    - font-size: "12px"
+```
+ */
+
+/*
+```sindri:ui:card
+title: "Conoce nuestra tienda"
+content: "Descripción de la tienda"
+footer: "Acciones en la tienda"
+variant: "primary"
+size: "lg"
+as: "a"
+href: "https://tu-tienda.example"
+htmltag:
+  class: "w-1/3 border-2 border-gray-500"
+```
+ */
+
+
 (function () {
   function classesForButton(cfg = {}) {
     const base =
@@ -9,7 +40,7 @@
       destructive:
         'bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60',
       outline:
-        'border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50',
+        'border bg-white shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50',
       secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
       ghost: 'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',
       link: 'text-primary underline-offset-4 hover:underline',

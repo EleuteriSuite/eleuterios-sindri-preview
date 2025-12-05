@@ -1,4 +1,12 @@
 // Sindri Docsify plugin: ui:file-uploaders
+
+/*
+```sindri:ui:file-uploaders
+title: "Upload your file(s)"
+multiple: true
+```
+ */
+
 (function () {
     function renderFileUploader(cfg) {
         const C = window.SindriCore || {};

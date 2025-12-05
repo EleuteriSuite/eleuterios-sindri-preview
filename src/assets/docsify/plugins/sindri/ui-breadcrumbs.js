@@ -1,5 +1,18 @@
 // Sindri Docsify plugin: ui:breadcrumbs
 // Depende de window.SindriCore (core.js)
+
+/*
+```sindri:ui:breadcrumbs
+items:
+  - title: "Home"
+    href: "#"
+  - title: "Category"
+    href: "#"
+  - title: "Product"
+    href: "#"
+```
+ */
+
 (function () {
   function renderBreadcrumbs(cfg) {
     const C = window.SindriCore || {};

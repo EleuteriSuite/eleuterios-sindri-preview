@@ -1,4 +1,21 @@
 // Sindri Docsify plugin: ui:details-list
+
+/*
+```sindri:ui:details-list
+items:
+  - title: "Title"
+    description: "Mr"
+  - title: "Name"
+    description: "John Frusciante"
+  - title: "Occupation"
+    description: "Guitarist"
+  - title: "Salary"
+    description: "$1,000,000+"
+  - title: "Bio"
+    description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit..."
+```
+ */
+
 (function () {
     function renderDetailsList(cfg) {
         const C = window.SindriCore || {};

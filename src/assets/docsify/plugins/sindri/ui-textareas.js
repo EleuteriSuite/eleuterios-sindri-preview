@@ -1,5 +1,19 @@
 // Sindri Docsify plugin: ui:textareas
 // Depende de window.SindriCore (core.js)
+
+/*
+```sindri:ui:textareas
+items:
+  - title: "Notes"
+    id: "Notes"
+    rows: 4
+    value: "Texto inicial"
+htmltag:
+  styles:
+    - background: "linear-gradient(180deg, #fff, #f8fafc)"
+```
+ */
+
 (function () {
   function renderTextareas(cfg) {
     const C = window.SindriCore || {};

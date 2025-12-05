@@ -1,5 +1,23 @@
 // Sindri Docsify plugin: ui:radio-groups
 // Depende de window.SindriCore (core.js)
+
+/*
+```sindri:ui:radio-groups
+legend: "Delivery"
+name: "DeliveryOption"
+items:
+  - id: "DeliveryStandard"
+    title: "Standard"
+    right: "Free"
+    value: "DeliveryStandard"
+    checked: true
+  - id: "DeliveryPriority"
+    title: "Next Day"
+    right: "£9.99"
+    value: "DeliveryPriority"
+```
+ */
+
 (function () {
   function renderRadioGroups(cfg) {
     const C = window.SindriCore || {};

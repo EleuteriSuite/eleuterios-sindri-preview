@@ -1,5 +1,20 @@
 // Sindri Docsify plugin: ui:checkboxes
 // Depende de window.SindriCore (core.js)
+
+/*
+```sindri:ui:checkboxes
+legend: "Checkboxes"
+items:
+  - id: "Option1"
+    title: "Option 1"
+    checked: true
+  - id: "Option2"
+    title: "Option 2"
+  - id: "Option3"
+    title: "Option 3"
+```
+ */
+
 (function () {
   function renderCheckboxes(cfg) {
     const C = window.SindriCore || {};

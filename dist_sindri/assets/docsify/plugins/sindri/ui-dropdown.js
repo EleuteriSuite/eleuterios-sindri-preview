@@ -1,4 +1,23 @@
 // Sindri Docsify plugin: ui:dropdown
+
+/*
+```sindri:ui:dropdown
+title: "Product"
+split: true
+open: true
+items:
+  - title: "Storefront"
+    href: "#"
+  - title: "Warehouse"
+    href: "#"
+  - title: "Stock"
+    href: "#"
+  - title: "Delete"
+    type: "button"
+    variant: "danger"
+```
+ */
+
 (function () {
     function renderDropdown(cfg) {
         const C = window.SindriCore || {};

@@ -1,5 +1,19 @@
 // Sindri Docsify plugin: ui:accordions
 // Depende de window.SindriCore (core.js)
+
+/*
+```sindri:ui:accordions
+items:
+  - title: "What are the basic features?"
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt similique..."
+    open: true
+  - title: "How do I get started?"
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit..."
+  - title: "What support options are available?"
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit..."
+```
+ */
+
 (function () {
   function renderAccordions(cfg) {
     const C = window.SindriCore || {};

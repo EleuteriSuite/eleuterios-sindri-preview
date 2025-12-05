@@ -1,4 +1,11 @@
 // Sindri Docsify plugin: ui:dividers
+
+/*
+```sindri:ui:dividers
+title: "Title goes here"
+```
+ */
+
 (function () {
     function renderDividers(cfg) {
         const C = window.SindriCore || {};

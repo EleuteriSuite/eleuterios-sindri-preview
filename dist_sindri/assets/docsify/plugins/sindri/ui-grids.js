@@ -1,4 +1,18 @@
 // Sindri Docsify plugin: ui:grids
+
+/*
+```sindri:ui:grids
+cols: 4
+gap: 4
+items:
+  - content: "Item 1"
+  - content: "Item 2"
+  - content: "Item 3"
+  - content: "Item 4"
+  - content: "Item 5"
+```
+ */
+
 (function () {
     function renderGrid(cfg) {
         const C = window.SindriCore || {};

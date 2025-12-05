@@ -1,5 +1,20 @@
 // Sindri Docsify plugin: ui:range-inputs
 // Depende de window.SindriCore (core.js)
+
+/*
+```sindri:ui:range-inputs
+items:
+  - title: "Max Volume"
+    id: "maxVolume"
+    min: 0
+    max: 100
+    value: 20
+htmltag:
+  styles:
+    - background: "linear-gradient(180deg, #fff, #f8fafc)"
+```
+ */
+
 (function () {
   function renderRangeInputs(cfg) {
     const C = window.SindriCore || {};
