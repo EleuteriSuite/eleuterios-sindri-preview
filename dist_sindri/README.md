@@ -177,3 +177,107 @@ action:
 htmltag:
   class: "testclass"
 ```
+
+```sindri:ui:badges
+items:
+  - title: "Live"
+  - title: "Live"
+    htmltag:
+      class: "border border-purple-500 text-purple-700 bg-transparent"
+```
+
+```sindri:ui:button-groups
+items:
+  - title: "View"
+  - title: "Edit"
+  - title: "Delete"
+```
+
+```sindri:ui:details-list
+items:
+  - title: "Title"
+    description: "Mr"
+  - title: "Name"
+    description: "John Frusciante"
+  - title: "Occupation"
+    description: "Guitarist"
+  - title: "Salary"
+    description: "$1,000,000+"
+  - title: "Bio"
+    description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit..."
+```
+
+```sindri:ui:dividers
+title: "Title goes here"
+```
+
+```sindri:ui:empty-states
+title: "No items found"
+description: "Get started by creating your first item. It only takes a few seconds."
+action:
+  title: "Create Item"
+  href: "#"
+links:
+  - title: "Learn how"
+    href: "#"
+  - title: "view examples"
+    href: "#"
+```
+
+```sindri:ui:dropdown
+title: "Product"
+split: true
+open: true
+items:
+  - title: "Storefront"
+    href: "#"
+  - title: "Warehouse"
+    href: "#"
+  - title: "Stock"
+    href: "#"
+  - title: "Delete"
+    type: "button"
+    variant: "danger"
+```
+
+```sindri:ui:file-uploaders
+title: "Upload your file(s)"
+multiple: true
+```
+
+```sindri:ui:filters
+items:
+  - title: "Color"
+    type: "checkbox"
+    options:
+      - title: "Red"
+        checked: false
+      - title: "Blue"
+        checked: true
+      - title: "Green"
+        checked: true
+  - title: "Size"
+    type: "radio"
+    options:
+      - title: "M"
+        checked: false
+      - title: "L"
+        checked: true
+      - title: "XL"
+        checked: false
+  - title: "Price"
+    type: "range"
+    min: 5
+    max: 2000
+```
+
+```sindri:ui:grids
+cols: 4
+gap: 4
+items:
+  - content: "Item 1"
+  - content: "Item 2"
+  - content: "Item 3"
+  - content: "Item 4"
+  - content: "Item 5"
+```
