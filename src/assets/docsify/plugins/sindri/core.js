@@ -14,98 +14,126 @@ function trimQuotes(str) {
 }
 
 function parseYamlLite(yaml) {
-  // Supports subset:
-  // key: value
-  // key:
-  //   subkey: value
-  //   styles:
-  //     - prop: value
-  // Strings can be quoted or unquoted. Angle brackets around values are stripped.
-  const lines = String(yaml || '')
-    .replace(/\r\n?/g, '\n')
-    .split('\n');
-  const result = {};
-  let currentObj = result;
-  let currentKey = null;
-  let inSection = null; // e.g., 'htmltag'
-  let inArrayKey = null; // e.g., 'styles'
-  let arrayTarget = null;
+    const lines = String(yaml || '')
+        .replace(/\r\n?/g, '\n')
+        .split('\n');
 
-  function ensureNested(target, key) {
-    if (!target[key] || typeof target[key] !== 'object' || Array.isArray(target[key])) {
-      target[key] = {};
+    const result = {};
+
+    function trimQuotes(s) {
+        if (!s) return s;
+        s = s.trim();
+        if (
+            (s.startsWith('"') && s.endsWith('"')) ||
+            (s.startsWith("'") && s.endsWith("'"))
+        ) {
+            return s.slice(1, -1);
+        }
+        return s;
     }
-    return target[key];
-  }
 
-  for (let raw of lines) {
-    const line = raw.replace(/\t/g, '  ');
-    if (!line.trim() || line.trim().startsWith('#')) continue;
-    const indent = line.match(/^\s*/)[0].length;
-    const content = line.trim();
+    // Índices de líneas útiles (no vacías ni comentarios)
+    const usefulIndices = [];
+    for (let i = 0; i < lines.length; i++) {
+        const t = lines[i].trim();
+        if (t && !t.startsWith('#')) usefulIndices.push(i);
+    }
+    const usefulSet = new Set(usefulIndices);
 
-    if (indent === 0) {
-      inArrayKey = null;
-      arrayTarget = null;
-      const m = content.match(/^(\S+):\s*(.*)$/);
-      if (m) {
+    function findNextNonEmpty(idx, minIndent) {
+        for (let j = idx + 1; j < lines.length; j++) {
+            if (!usefulSet.has(j)) continue;
+            const l = lines[j];
+            const indent = l.match(/^\s*/)[0].length;
+            if (typeof minIndent === 'number' && indent <= minIndent) {
+                // Hermano o padre: se acaba el bloque
+                return null;
+            }
+            return { index: j, line: l };
+        }
+        return null;
+    }
+
+    // Pila de contextos según indent
+    const stack = [{ indent: -1, container: result, type: 'object' }];
+
+    for (let i = 0; i < lines.length; i++) {
+        if (!usefulSet.has(i)) continue;
+
+        let raw = lines[i];
+        const line = raw.replace(/\t/g, '  ');
+        const indent = line.match(/^\s*/)[0].length;
+        const content = line.trim();
+
+        // Sube en la jerarquía hasta encontrar un indent menor
+        while (stack.length && stack[stack.length - 1].indent >= indent) {
+            stack.pop();
+        }
+        const parentCtx = stack[stack.length - 1];
+        const container = parentCtx.container;
+
+        // ----- ÍTEMS DE ARRAY: "- ..."
+        if (content.startsWith('- ')) {
+            if (!Array.isArray(container)) {
+                // No debería pasar si la detección de arrays funciona
+                continue;
+            }
+
+            const entry = content.slice(2).trim();
+            const mm = entry.match(/^(\S+):\s*(.*)$/);
+
+            if (mm) {
+                // "- key: value"
+                const prop = mm[1];
+                const rest = mm[2];
+                const obj = {};
+                obj[prop] = trimQuotes(rest);
+                container.push(obj);
+                // Este item puede tener más claves debajo:
+                stack.push({ indent, container: obj, type: 'objectItem' });
+            } else {
+                // "- valorSimple"
+                container.push(trimQuotes(entry));
+            }
+
+            continue;
+        }
+
+        // ----- LÍNEAS "key: ..." (objeto o inicio de bloque)
+        const m = content.match(/^(\S+):\s*(.*)$/);
+        if (!m) continue;
+
         const key = m[1];
         const rest = m[2];
-        if (rest === '' || rest === null) {
-          inSection = key;
-          currentObj = ensureNested(result, key);
-          currentKey = null;
+
+        if (rest === '') {
+            // "key:" → puede ser objeto o array
+            const nextInfo = findNextNonEmpty(i, indent);
+            let isArray = false;
+
+            if (nextInfo) {
+                const nextIndent = nextInfo.line.match(/^\s*/)[0].length;
+                if (nextIndent > indent && nextInfo.line.trim().startsWith('- ')) {
+                    isArray = true;
+                }
+            }
+
+            if (isArray) {
+                const arr = [];
+                container[key] = arr;
+                stack.push({ indent, container: arr, type: 'array' });
+            } else {
+                const obj = {};
+                container[key] = obj;
+                stack.push({ indent, container: obj, type: 'object' });
+            }
         } else {
-          inSection = null;
-          currentKey = key;
-          currentObj = result;
-          currentObj[currentKey] = trimQuotes(rest);
+            // "key: value" simple
+            container[key] = trimQuotes(rest);
         }
-      }
-      continue;
     }
 
-    // indent > 0 => inside section
-    if (inSection) {
-      // styles array start
-      const m2 = content.match(/^(\S+):\s*(.*)$/);
-      if (m2) {
-        const key2 = m2[1];
-        const rest2 = m2[2];
-        if (rest2 === '') {
-          if (key2 === 'styles') {
-            currentObj[key2] = [];
-            inArrayKey = key2;
-            arrayTarget = currentObj[key2];
-          } else {
-            currentObj[key2] = {};
-            inArrayKey = null;
-            arrayTarget = null;
-          }
-        } else {
-          currentObj[key2] = trimQuotes(rest2);
-          inArrayKey = null;
-          arrayTarget = null;
-        }
-        continue;
-      }
-
-      if (inArrayKey && content.startsWith('- ')) {
-        // e.g., - color: "#ffffff"
-        const kv = content.slice(2).trim();
-        const mm = kv.match(/^(\S+):\s*(.*)$/);
-        if (mm) {
-          const prop = mm[1];
-          const val = trimQuotes(mm[2]);
-          arrayTarget.push({ [prop]: val });
-        } else {
-          arrayTarget.push(kv);
-        }
-      }
-    }
-  }
-
-  return result;
+    return result;
 }
 
 function unwrapAnglesInString(s) {

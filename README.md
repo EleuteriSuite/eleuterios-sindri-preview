@@ -29,3 +29,7 @@ $ npm install
 ```bash
 $ npm run serve
 ```
+
+## Create Sindri Block
+
+Link to create [Sindri Block](https://docs.valentigamez.com/#/apps-suite/es/procesos/tecnicos/crear_bloque_sindri)

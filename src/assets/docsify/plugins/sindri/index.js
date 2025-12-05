@@ -7,3 +7,4 @@ import './utils-ui.js';
 import './ui-button.js';
 import './ui-card.js';
 import './marketing-hero.js';
+import './marketing-feature.js';
