@@ -1,6 +1,8 @@
 ```sindri:marketing:banners
 title: "Understand user flow and"
-titleStrong: "increase"
+titleStrong:
+  description: "increase"
+  variant: "primary"
 description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi. Natus, provident accusamus impedit minima harum corporis iusto."
 actions:
   - description: "Get Started"

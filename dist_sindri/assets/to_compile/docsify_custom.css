@@ -13,3 +13,7 @@
 .markdown-section {
     max-width: 100%;
 }
+
+#skip-to-content {
+    display: none;
+}
