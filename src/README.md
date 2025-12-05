@@ -27,6 +27,35 @@ htmltag:
   class: "w-1/3 border-2 border-gray-500"
 ```
 
+```sindri:ui:inputs
+items:
+  - title: "Email"
+    type: "email"
+    placeholder: "tu@correo.com"
+    description: "Nunca compartiremos tu correo."
+  - title: "Nombre"
+    type: "text"
+    placeholder: "Tu nombre"
+htmltag:
+  styles:
+    - background: "linear-gradient(180deg, #fff, #f8fafc)"
+```
+
+```sindri:ui:quantity-inputs
+items:
+  - title: "Cantidad"
+    value: 2
+    min: 1
+    max: 10
+  - title: "Unidades"
+    value: 1
+    min: 0
+    max: 99
+htmltag:
+  styles:
+    - background: "linear-gradient(180deg, #ffffff, #f1f5f9)"
+```
+
 ```sindri:marketing:feature
 items:
   - title: "Sin comisión"

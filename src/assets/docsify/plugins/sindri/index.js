@@ -8,3 +8,5 @@ import './ui-button.js';
 import './ui-card.js';
 import './marketing-hero.js';
 import './marketing-feature.js';
+import './ui-inputs.js';
+import './ui-quantity-inputs.js';
