@@ -1,3 +1,0 @@
-# Sindri preview
-
-Under construction.

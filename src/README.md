@@ -338,6 +338,34 @@ items:
     description: "Simple, predictable output"
 ```
 
+```sindri:marketing:feature
+items:
+  - title: "Sin comisión"
+    description: "Sin tarifas ocultas ni sorpresas."
+  - title: "Rápido de implementar"
+    description: "Plantillas listas y componentes reutilizables."
+  - title: "Escalable"
+    description: "Añade más bloques y páginas según creces."
+htmltag:
+  styles:
+    - background: "linear-gradient(180deg, #fff, #f8fafc)"
+```
+
+```sindri:marketing:hero
+title:
+  description: "Ecosistema digital Open Source"
+subtitle:
+  description: "Tu página web, tienda virtual, correos electrónicos, newsletter, etc por 15€/mes o 150€/año"
+action:
+  description: "Ser mecenas"
+  variant: "primary"
+  size: "lg"
+  as: "a"
+  href: "#mecenas"
+htmltag:
+  class: "testclass"
+```
+
 ```sindri:ui:breadcrumbs
 items:
   - title: "Home"
@@ -608,34 +636,6 @@ items:
 htmltag:
   styles:
     - background: "linear-gradient(180deg, #ffffff, #f1f5f9)"
-```
-
-```sindri:marketing:feature
-items:
-  - title: "Sin comisión"
-    description: "Sin tarifas ocultas ni sorpresas."
-  - title: "Rápido de implementar"
-    description: "Plantillas listas y componentes reutilizables."
-  - title: "Escalable"
-    description: "Añade más bloques y páginas según creces."
-htmltag:
-  styles:
-    - background: "linear-gradient(180deg, #fff, #f8fafc)"
-```
-
-```sindri:marketing:hero
-title:
-  description: "Ecosistema digital Open Source"
-subtitle:
-  description: "Tu página web, tienda virtual, correos electrónicos, newsletter, etc por 15€/mes o 150€/año"
-action:
-  description: "Ser mecenas"
-  variant: "primary"
-  size: "lg"
-  as: "a"
-  href: "#mecenas"
-htmltag:
-  class: "testclass"
 ```
 
 ```sindri:ui:badges
