@@ -1,28 +1,208 @@
-MIT License
+# **ELEUTERIOS LICENSE v1.0**
 
-Copyright (c) 2024 Eleuterios (https://github.com/EleuteriSuite/eleuterios-sindri-preview)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+**Licencia de Uso del Software EleuteriOS**
+**© 2025 Valentí Gàmez — Todos los derechos reservados hasta 31/12/2030**
+Versión publicada: diciembre de 2025
 
 ---
 
-### Third-Party Licenses
+## **PREÁMBULO**
+
+El autor, **Valentí Gàmez**, publica el **Software EleuteriOS** bajo una licencia híbrida temporal:
+
+1. acceso universal no comercial desde el día 1,
+2. explotación comercial exclusiva para titulares de **Licencias de Mecenas** (categorías Fénix, Dragón o Gnomo),
+3. transición automática e irrevocable a **licencia MIT** el 31 de diciembre de 2030 a las 23:57 CET.
+
+---
+
+# **1. DEFINICIONES**
+
+A efectos de esta licencia:
+
+### **1.1. Software EleuteriOS**
+
+Incluye todo código fuente, binarios, librerías, módulos, plantillas, componentes UI, documentación técnica, APIs, CLIs y cualquier obra informática publicada oficialmente por el autor bajo esta licencia.
+
+### **1.2. Publicación**
+
+Fecha en la que cualquier parte del Software EleuteriOS se hace accesible al público por primera vez.
+
+### **1.3. Licencias de Mecenas**
+
+Cualquiera de las licencias digitales **Fénix**, **Dragón** o **Gnomo** emitidas oficialmente por Valentí Gàmez y registradas en los canales oficiales del autor. Nombres de usuario poseedores verificables de forma pública en https://valentigamez.com/p/mecenas.
+
+### **1.4. Uso Comercial**
+
+Toda acción que genere ingresos directa o indirectamente mediante el uso del Software EleuteriOS, incluyendo:
+venta, reventa, SaaS, consultoría, TPV, ERP, automatizaciones, integraciones, servicios profesionales, suscripciones o productos derivados.
+
+### **1.5. Obra Derivada**
+
+Cualquier obra que modifique, amplíe, adapte o incorpore el Software EleuteriOS de manera reconocible.
+
+### **1.6. Obra Sin Derivar**
+
+Redistribución literal o casi literal del software sin cambios sustanciales.
+
+### **1.7. Marcas Comerciales**
+
+"EleuteriOS", “EleuteriSuite”, “Sindri”, “Ariadna” y cualquier marca, logotipo o identidad visual del autor.
+
+---
+
+# **2. DERECHOS NO COMERCIALES (acceso universal desde el día 1)**
+
+Se concede a cualquier persona, sin necesidad de registro, el derecho gratuito, mundial y no exclusivo a:
+
+1. Descargar, ejecutar y estudiar el Software EleuteriOS.
+2. Modificarlo internamente para uso personal o educativo.
+3. Crear prototipos y proyectos no comerciales.
+4. Alojar forks o mirrors sin DRM, manteniendo esta licencia y los avisos de copyright.
+
+**No se permite** ningún tipo de explotación comercial sin una Licencia de Mecenas válida antes de 2030.
+
+---
+
+# **3. EXPLOTACIÓN COMERCIAL RESTRINGIDA (exclusiva para Mecenas hasta 31/12/2030)**
+
+### **3.1. Titulares autorizados**
+
+Solo quienes posean una Licencia Fénix, Dragón o Gnomo pueden utilizar **comercialmente** el Software EleuteriOS antes del 31/12/2030.
+
+### **3.2. Derechos concedidos a Mecenas**
+
+Los titulares pueden:
+
+a) Crear, ofrecer y vender Obras Derivadas.
+b) Integrar EleuteriOS en productos SaaS, TPVs, apps, sitios web o servicios profesionales.
+c) Usar módulos y plantillas oficiales con fines comerciales.
+d) Distribuir compilaciones modificadas.
+e) Obtener automáticamente los derechos MIT en 2030.
+
+### **3.3. Prohibiciones incluso para Mecenas**
+
+Antes del 31/12/2030, queda prohibido:
+
+a) Vender el Software EleuteriOS **sin transformación sustancial**.
+b) Sublicenciarlo con restricciones adicionales a terceros.
+c) Comercializar compilaciones idénticas a las oficiales.
+d) Usar marcas oficiales en marketing sin autorización expresa.
+
+### **3.4. Obligaciones de atribución**
+
+Toda Obra Derivada comercializada debe incluir:
+
+**«Basado en Software EleuteriOS — Licencia EleuteriOS License v1.0 (© 2025 Valentí Gàmez) — Sublicenciado mediante Licencia de Mecenas (© titular)»**
+
+---
+
+# **4. CONTENIDOS EXPRESAMENTE NO PERMITIDOS PARA VENTA (hasta 2030)**
+
+1. Venta del código fuente original sin modificación.
+2. Reempaquetado literal de plantillas o módulos oficiales.
+3. Venta de binarios o builds idénticos al autor.
+4. Venta o cesión del software acompañado de marcas comerciales oficiales.
+
+---
+
+# **5. MIGRACIÓN AUTOMÁTICA A LICENCIA MIT (31/12/2030, 23:57 CET)**
+
+En la fecha indicada:
+
+### **5.1. Transición automática**
+
+El Software EleuteriOS pasa **irrevocablemente** a la licencia **MIT**, según su texto estándar internacional.
+
+### **5.2. Efectos jurídicos**
+
+a) Cualquier persona podrá usar, copiar, modificar y vender el software bajo MIT.
+b) Las obligaciones de Mecenas dejan de aplicarse.
+c) Se mantienen los avisos de copyright según MIT.
+d) **Las marcas comerciales NO se liberalizan** y siguen protegidas.
+
+---
+
+# **6. MÓDULOS, PLANTILLAS Y COMPONENTES**
+
+Todo módulo, plantilla, paquete UI o contenido auxiliar publicado oficialmente:
+
+1. Se rige por esta misma licencia EleuteriOS License v1.0.
+2. Tiene el mismo régimen de exclusividad comercial para Mecenas.
+3. Se libera a MIT simultáneamente en 2030.
+4. No puede ser vendido sin modificación antes de 2030.
+
+---
+
+# **7. GARANTÍAS Y RESPONSABILIDADES**
+
+### **7.1. Ausencia de garantía**
+
+El Software EleuteriOS se proporciona “TAL CUAL”, sin garantía de ningún tipo, expresa o implícita.
+
+### **7.2. Exclusión de responsabilidad**
+
+El autor no será responsable de daños directos, indirectos, incidentales, pérdida de beneficios, pérdida de datos o interrupciones comerciales derivadas del uso del software.
+
+---
+
+# **8. TERMINACIÓN DE LA LICENCIA**
+
+### **8.1. Terminación automática**
+
+La licencia se revocará automáticamente si el usuario:
+
+a) Infringe una condición esencial (p. ej., uso comercial sin ser Mecenas).
+b) Realiza un uso prohibido de marcas comerciales.
+
+### **8.2. Restauración**
+
+La licencia puede restaurarse si:
+
+a) No existió mala fe.
+b) Se corrige la infracción en un plazo de 30 días.
+c) No ha habido reincidencia.
+
+### **8.3. Terminación sin efecto sobre MIT**
+
+La revocación no afecta al derecho futuro a usar el software cuando pase a MIT en 2030.
+
+---
+
+# **9. MARCAS COMERCIALES**
+
+Nada de esta licencia concede derecho sobre las marcas oficiales del autor.
+Los usos permitidos se limitan a **referencias descriptivas razonables** sin sugerir patrocinio o afiliación.
+
+---
+
+# **10. LEGISLACIÓN APLICABLE Y JURISDICCIÓN**
+
+Esta licencia se rige por el **Derecho español**.
+
+Cualquier disputa se someterá exclusivamente a los **Juzgados y Tribunales de Manresa (Barcelona, España)**, salvo previsión legal imperativa distinta.
+
+---
+
+# **11. CONTACTO OFICIAL**
+
+Sitio oficial: **[https://eleuterios.org](https://eleuterios.org)**
+Repositorios oficiales: **[https://github.com/EleuteriSuite](https://github.com/EleuteriSuite)**
+Correo legal y administrativo: **[iam@valentigamez.com](mailto:iam@valentigamez.com)**
+
+---
+
+# **ANEXO A — Resumen informativo (no vinculante)**
+
+* Día 1: uso libre no comercial para todo el mundo.
+* Día 1: uso comercial permitido solo a Mecenas.
+* Hasta 2030: prohibida la reventa sin transformación.
+* 31/12/2030: el software se vuelve MIT.
+* Las marcas comerciales quedan siempre protegidas.
+
+---
+
+# Third-Party Licenses
 
 Sindri Preview incorporates the following third-party open-source software:
 
@@ -44,7 +224,7 @@ Sindri Preview incorporates the following third-party open-source software:
 
 ---
 
-#### Docsify MIT License
+## Docsify MIT License
 
 MIT License
 
@@ -70,7 +250,7 @@ SOFTWARE.
 
 ---
 
-#### TailwindCSS MIT License
+## TailwindCSS MIT License
 
 MIT License
 
@@ -96,7 +276,7 @@ SOFTWARE.
 
 ---
 
-#### ShadCN Vue MIT License
+## ShadCN Vue MIT License
 
 MIT License
 
@@ -122,7 +302,7 @@ SOFTWARE.
 
 ---
 
-#### HyperUI MIT License
+## HyperUI MIT License
 
 MIT License
 
